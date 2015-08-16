@@ -1,4 +1,5 @@
-# Unity Pokémon Kit *(projet en phase de prototypage)*
+# Unity Pokémon Kit 
+####*(projet en phase de prototypage)*
 
 ## Quelle est cette page ?
 Vous vous trouvez actuellement sur un dépôt GitHub centralisant tout le travail effectué sur **Unity Pokémon Kit**.
@@ -37,7 +38,6 @@ Le dépôt comporte 4 répertoires importants :
 ### FinalArt
 Un des fondateurs d'UPK. Issu de *[Community Script Project](http://communityscriptproject.com/)* (anciennement *Pokémon Script Project*) et co-créateur de *[Pokémon Extinction](http://communityscriptproject.com/PokemonExtinction/)*.
 Il est polyvalent dans la réalisation de toutes les tâches inhérentes à un projet de cette ampleur.
-**Activités**
 * Gestion du projet
 * Création de ressources graphiques
 * Développement de scripts & systèmes
