@@ -44,4 +44,6 @@ Il est polyvalent dans la réalisation de toutes les tâches inhérentes à un p
 
 -----
 
-![Unity Pokemon Kit](/doc/Graphics/Logo/PNG/IconUPK.png?raw=true "Unity Pokemon Kit")
+<div style="text-align:center">
+	<img src="/doc/Graphics/Logo/PNG/IconUPK.png"/>
+</div>
