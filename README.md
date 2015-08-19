@@ -1,5 +1,7 @@
-# Unity Pokémon Kit 
-####*(projet en phase de prototypage)*
+<div style="text-align:center">
+![Unity Pokemon Kit](/doc/Graphics/Logo/PNG/LogoUPK.png?raw=true "Unity Pokemon Kit")
+*(projet en phase de réflexion)*
+</div>
 
 ## Quelle est cette page ?
 Vous vous trouvez actuellement sur un dépôt GitHub centralisant tout le travail effectué sur **Unity Pokémon Kit**.
