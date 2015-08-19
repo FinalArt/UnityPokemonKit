@@ -44,6 +44,6 @@ Il est polyvalent dans la réalisation de toutes les tâches inhérentes à un p
 
 -----
 
-<div style="text-align:center">
+<div align="center">
 	<img src="/doc/Graphics/Logo/PNG/IconUPK.png"/>
 </div>
