@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 7402803fca8d67948873ce6491006d91
+timeCreated: 1439408248
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bag1
+    100004: Bagbelt1
+    100006: Bagbelt2
+    100008: Bagbelt3
+    100010: BrendanOW
+    100012: BrendanOW_Ring
+    100014: BrendanOW_ShoesA
+    100016: BrendanOW_ShoesB
+    100018: Camera
+    100020: Cap
+    100022: //RootNode
+    100024: Head
+    100026: Hips
+    100028: Lamp
+    100030: LArmA
+    100032: LArmB
+    100034: LFingerA1
+    100036: LFingerA2
+    100038: LFingerB1
+    100040: LFingerB2
+    100042: LFoot
+    100044: LForeArm
+    100046: LHand
+    100048: LHandEX
+    100050: LLeg
+    100052: loc_eye
+    100054: loc_head
+    100056: loc_mouth
+    100058: LShoulder
+    100060: LThigh
+    100062: LToe
+    100064: model
+    100066: Neck
+    100068: Origin
+    100070: RArmA
+    100072: RArmB
+    100074: RFingerA1
+    100076: RFingerA2
+    100078: RFingerB1
+    100080: RFingerB2
+    100082: RFoot
+    100084: RForeArm
+    100086: RHand
+    100088: RHandEX
+    100090: RLeg
+    100092: RShoulder
+    100094: rstr0002_00_fi
+    100096: RThigh
+    100098: RToe
+    100100: Spine1
+    100102: Spine2
+    100104: sw_parts01
+    100106: sw_parts02
+    100108: sw_parts03
+    100110: sw_parts04
+    100112: sw_parts05
+    100114: Waist
+    400000: Armature
+    400002: Bag1
+    400004: Bagbelt1
+    400006: Bagbelt2
+    400008: Bagbelt3
+    400010: BrendanOW
+    400012: BrendanOW_Ring
+    400014: BrendanOW_ShoesA
+    400016: BrendanOW_ShoesB
+    400018: Camera
+    400020: Cap
+    400022: //RootNode
+    400024: Head
+    400026: Hips
+    400028: Lamp
+    400030: LArmA
+    400032: LArmB
+    400034: LFingerA1
+    400036: LFingerA2
+    400038: LFingerB1
+    400040: LFingerB2
+    400042: LFoot
+    400044: LForeArm
+    400046: LHand
+    400048: LHandEX
+    400050: LLeg
+    400052: loc_eye
+    400054: loc_head
+    400056: loc_mouth
+    400058: LShoulder
+    400060: LThigh
+    400062: LToe
+    400064: model
+    400066: Neck
+    400068: Origin
+    400070: RArmA
+    400072: RArmB
+    400074: RFingerA1
+    400076: RFingerA2
+    400078: RFingerB1
+    400080: RFingerB2
+    400082: RFoot
+    400084: RForeArm
+    400086: RHand
+    400088: RHandEX
+    400090: RLeg
+    400092: RShoulder
+    400094: rstr0002_00_fi
+    400096: RThigh
+    400098: RToe
+    400100: Spine1
+    400102: Spine2
+    400104: sw_parts01
+    400106: sw_parts02
+    400108: sw_parts03
+    400110: sw_parts04
+    400112: sw_parts05
+    400114: Waist
+    2300000: BrendanOW
+    2300002: BrendanOW_Ring
+    2300004: BrendanOW_ShoesA
+    2300006: BrendanOW_ShoesB
+    3300000: BrendanOW
+    3300002: BrendanOW_Ring
+    3300004: BrendanOW_ShoesA
+    3300006: BrendanOW_ShoesB
+    4300000: BrendanOW
+    4300002: BrendanOW_ShoesA
+    4300004: BrendanOW_ShoesB
+    4300006: BrendanOW_Ring
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
