@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UPK\Maps\Scripts\Characters\PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UPK\Speak.cs">
     <Files>
-      <File FileName="Assets\UPK\Maps\Scripts\Characters\PlayerController.cs" Line="18" Column="36" />
+      <File FileName="Assets\UPK\Maps\Scripts\Characters\PlayerController.cs" Line="16" Column="15" />
+      <File FileName="Assets\UPK\Speak.cs" Line="15" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

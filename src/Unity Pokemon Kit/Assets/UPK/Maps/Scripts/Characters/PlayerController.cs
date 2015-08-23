@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour {
 	void Start() {
 		this.controller = GetComponent<CharacterController>();
 		this.player = GameObject.FindWithTag("PlayerOverworld");
+		if (this.player == null) {
+			Debug.LogError("Tag 'PlayerOverworld' not set up on player's overworld (or player doesn't exist).");
+			this.enabled = false;
+		}
 	}
 	
 	void Update() {

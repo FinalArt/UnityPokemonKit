@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{6ABD661B-9583-0666-D675-D15716B43552}</ProjectGuid>
+	<ProjectGuid>{3338B5D6-58CD-9398-7457-E3270EF3C683}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,8 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\UPK\Maps\Scripts\Characters\PlayerController.cs" />
-     <Compile Include="Assets\UPK\Maps\Scripts\Characters\Speak.cs" />
+     <Compile Include="Assets\Msg.js" />
      <None Include="Assets\UPK\Shaders\Cartoon\Base.shader" />
      <None Include="Assets\UPK\Shaders\Cartoon\BaseOutlined.shader" />
  <Reference Include="UnityEngine.UI">
