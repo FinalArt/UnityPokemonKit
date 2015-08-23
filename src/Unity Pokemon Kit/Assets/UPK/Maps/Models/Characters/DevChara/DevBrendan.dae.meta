@@ -133,6 +133,10 @@ ModelImporter:
     4300002: BrendanOW_ShoesA
     4300004: BrendanOW_ShoesB
     4300006: BrendanOW_Ring
+    6400000: BrendanOW
+    6400002: BrendanOW_Ring
+    6400004: BrendanOW_ShoesA
+    6400006: BrendanOW_ShoesB
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -159,10 +163,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
