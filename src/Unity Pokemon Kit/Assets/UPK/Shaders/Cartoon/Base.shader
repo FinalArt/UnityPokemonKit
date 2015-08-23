@@ -6,6 +6,7 @@ Shader "Cartoon/Base"
 {
     Properties 
     {
+    	[Toggle(_TEX_ON)] _DetailTex ("Enable texture", Float) = 1
 		_Outline ("Outline width", Float) = 1
 		_OutlineColor ("Outline color", Color) = (0,0,0,1)
 		_Brightness ("Brightness (1 = neutral)", Float) = 1.0

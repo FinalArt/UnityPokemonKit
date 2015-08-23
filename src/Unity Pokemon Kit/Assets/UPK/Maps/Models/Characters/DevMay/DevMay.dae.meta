@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: 04de9401b9ff62e47b5db47a9785a41e
+timeCreated: 1440346807
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bag
+    100004: //RootNode
+    100006: Head
+    100008: Hips
+    100010: Lamp
+    100012: LArmA
+    100014: LArmB
+    100016: LFingerA1
+    100018: LFingerA2
+    100020: LFingerB1
+    100022: LFingerB2
+    100024: LFoot
+    100026: LForeArm
+    100028: LHair
+    100030: LHand
+    100032: LHandEX
+    100034: LLeg
+    100036: loc_eye
+    100038: loc_head
+    100040: loc_mouth
+    100042: LRibbon
+    100044: LShoulder
+    100046: LThigh
+    100048: LToe
+    100050: MayOW
+    100052: MayOW_Ring
+    100054: MayOW_ShoesA
+    100056: MayOW_ShoesB
+    100058: model
+    100060: Neck
+    100062: Origin
+    100064: RArmA
+    100066: RArmB
+    100068: RFingerA1
+    100070: RFingerA2
+    100072: RFingerB1
+    100074: RFingerB2
+    100076: RFoot
+    100078: RForeArm
+    100080: RHair
+    100082: RHand
+    100084: RHandEX
+    100086: RLeg
+    100088: RRibbon
+    100090: RShoulder
+    100092: rstr0001_00_fi
+    100094: RThigh
+    100096: RToe
+    100098: Spine1
+    100100: Spine2
+    100102: sw_parts01
+    100104: sw_parts02
+    100106: sw_parts03
+    100108: sw_parts04
+    100110: sw_parts05
+    100112: Waist
+    400000: Armature
+    400002: Bag
+    400004: //RootNode
+    400006: Head
+    400008: Hips
+    400010: Lamp
+    400012: LArmA
+    400014: LArmB
+    400016: LFingerA1
+    400018: LFingerA2
+    400020: LFingerB1
+    400022: LFingerB2
+    400024: LFoot
+    400026: LForeArm
+    400028: LHair
+    400030: LHand
+    400032: LHandEX
+    400034: LLeg
+    400036: loc_eye
+    400038: loc_head
+    400040: loc_mouth
+    400042: LRibbon
+    400044: LShoulder
+    400046: LThigh
+    400048: LToe
+    400050: MayOW
+    400052: MayOW_Ring
+    400054: MayOW_ShoesA
+    400056: MayOW_ShoesB
+    400058: model
+    400060: Neck
+    400062: Origin
+    400064: RArmA
+    400066: RArmB
+    400068: RFingerA1
+    400070: RFingerA2
+    400072: RFingerB1
+    400074: RFingerB2
+    400076: RFoot
+    400078: RForeArm
+    400080: RHair
+    400082: RHand
+    400084: RHandEX
+    400086: RLeg
+    400088: RRibbon
+    400090: RShoulder
+    400092: rstr0001_00_fi
+    400094: RThigh
+    400096: RToe
+    400098: Spine1
+    400100: Spine2
+    400102: sw_parts01
+    400104: sw_parts02
+    400106: sw_parts03
+    400108: sw_parts04
+    400110: sw_parts05
+    400112: Waist
+    4300000: MayOW
+    4300002: MayOW_ShoesA
+    4300004: MayOW_ShoesB
+    4300006: MayOW_Ring
+    9500000: //RootNode
+    13700000: MayOW
+    13700002: MayOW_Ring
+    13700004: MayOW_ShoesA
+    13700006: MayOW_ShoesB
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0299999993
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
