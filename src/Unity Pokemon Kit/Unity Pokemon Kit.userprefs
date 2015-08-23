@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UPK\Maps\Scripts\Characters\PlayerController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UPK\Shaders\Cartoon\BaseOutlined.shader">
     <Files>
-      <File FileName="Assets\UPK\Maps\Scripts\Characters\PlayerController.cs" Line="103" Column="2" />
+      <File FileName="Assets\UPK\Shaders\Cartoon\Base.shader" Line="3" Column="70" />
+      <File FileName="Assets\UPK\Shaders\Cartoon\BaseOutlined.shader" Line="2" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

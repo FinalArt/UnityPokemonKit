@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\UPK\Maps\Scripts\Characters\PlayerController.cs" />
+     <None Include="Assets\UPK\Shaders\Cartoon\Base.shader" />
+     <None Include="Assets\UPK\Shaders\Cartoon\BaseOutlined.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
