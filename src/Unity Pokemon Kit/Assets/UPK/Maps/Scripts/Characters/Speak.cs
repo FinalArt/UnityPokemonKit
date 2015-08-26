@@ -2,7 +2,7 @@
 using System.Collections;
 
 /**
- * Make character speak with custom message and box
+ * Make character speak with custom message and GUI skin
  * @Require : The "PlayerOverworld" tag on the "Overworld" game object of the "Player" prefab.
  * @Info : Change keyboard shortcuts for "Submit" in Unity with Edit > Project Settings > Input > Submit
  * @Author : FinalArt (08/2015)
@@ -10,12 +10,11 @@ using System.Collections;
 public class Speak : MonoBehaviour {
 
 	public string message = "Empty text"; 
-	public Rect boxSize = new Rect(0.1f, 0.7f, 0.8f, 0.2f); 
+	public GUISkin skin;
 
 	private float MIN_DISTANCE = 1f;
 
 	private Transform playerTransform; 
-	private Rect messageBox;
 	private bool showText;
 
 	void Start() {
@@ -25,8 +24,6 @@ public class Speak : MonoBehaviour {
 			this.enabled = false;
 		} else {
 			this.showText = false;
-			this.messageBox = new Rect (Screen.width * boxSize.x, Screen.height * boxSize.y, 
-			                            Screen.width * boxSize.width, Screen.height * boxSize.height);
 		}
 	}
 	
@@ -42,6 +39,9 @@ public class Speak : MonoBehaviour {
 	
 	void OnGUI() {
 		if (showText) {
+			GUI.skin = skin;
+			Rect messageBox = new Rect ((Screen.width - skin.box.fixedWidth) / 2, (Screen.height - skin.box.fixedHeight) / 1.1f, 
+			                            skin.box.fixedWidth, skin.box.fixedHeight);
 			GUI.Box(messageBox, message);
 		}
 	}
