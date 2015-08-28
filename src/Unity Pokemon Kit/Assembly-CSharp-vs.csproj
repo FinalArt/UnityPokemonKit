@@ -46,11 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\UPK\Maps\Scripts\Characters\PlayerController.cs" />
-     <Compile Include="Assets\UPK\Maps\Scripts\Characters\Speak.cs" />
-     <None Include="Assets\UPK\GUI\Fonts\Roboto\LICENSE.txt" />
-     <None Include="Assets\UPK\Shaders\Cartoon\Base.shader" />
-     <None Include="Assets\UPK\Shaders\Cartoon\BaseOutlined.shader" />
+     <Compile Include="Assets\UPK\Scripts\Characters\PlayerController.cs" />
+     <Compile Include="Assets\UPK\Scripts\Characters\Speak.cs" />
+     <Compile Include="Assets\UPK\Scripts\Tools\UserInputs.cs" />
+     <Compile Include="Assets\UPK\Systems\Enums\CharacterDirectionDegrees.cs" />
+     <Compile Include="Assets\UPK\Systems\Services\Player\PlayerMovementServices.cs" />
+     <None Include="Assets\UPK\Graphics\Fonts\Roboto\LICENSE.txt" />
+     <None Include="Assets\UPK\Graphics\Shaders\Cartoon\Base.shader" />
+     <None Include="Assets\UPK\Graphics\Shaders\Cartoon\BaseOutlined.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
