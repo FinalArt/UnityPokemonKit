@@ -50,6 +50,7 @@
      <Compile Include="Assets\UPK\Scripts\Characters\Speak.cs" />
      <Compile Include="Assets\UPK\Scripts\Tools\UserInputs.cs" />
      <Compile Include="Assets\UPK\Systems\Enums\CharacterDirectionDegrees.cs" />
+     <Compile Include="Assets\UPK\Systems\Services\Player\PlayerDialogServices.cs" />
      <Compile Include="Assets\UPK\Systems\Services\Player\PlayerMovementServices.cs" />
      <None Include="Assets\UPK\Graphics\Fonts\Roboto\LICENSE.txt" />
      <None Include="Assets\UPK\Graphics\Shaders\Cartoon\Base.shader" />

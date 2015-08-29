@@ -9,12 +9,18 @@ using System.Collections;
  */
 public class Speak : MonoBehaviour {
 
-	public string message = "Empty text"; 
+	[TextArea(3,10)]
+	public string message = "Un texte";
 	public GUISkin skin;
-
+	public int lineSize = 25;
+	
 	private float MIN_DISTANCE = 1f;
+	private int LINES_AMOUNT = 2;
 
 	private Transform playerTransform; 
+	private Rect messageBox;
+	private string[] lines;
+	private int lineIndex;
 	private bool showText;
 
 	void Start() {
@@ -22,27 +28,39 @@ public class Speak : MonoBehaviour {
 		if (this.playerTransform == null) {
 			Debug.LogError ("Tag 'PlayerOverworld' not set up on player's overworld (or player doesn't exist).");
 			this.enabled = false;
-		} else {
-			this.showText = false;
-		}
+		} 
+		this.messageBox = new Rect ((Screen.width - skin.box.fixedWidth) / 2, (Screen.height - skin.box.fixedHeight) / 1.1f, 
+		                            skin.box.fixedWidth, skin.box.fixedHeight);
+		this.lines = PlayerDialogServices.convertToLines(this.message, this.lineSize);
+		this.hideText();
 	}
 	
 	void Update() {
 		if (Vector3.Distance(transform.position, playerTransform.position) <= MIN_DISTANCE) {
 			if (Input.GetButtonDown("Submit")) { // "Space" or "Numerical Pad Enter" key
-				showText = !showText; 
+				if (!showText) {
+					showText = true;
+				} else {
+					this.lineIndex += this.LINES_AMOUNT;
+					if (this.lineIndex >= this.lines.Length) {
+						this.hideText();
+					}
+				}
 			}
 		} else {
-			showText = false;
+			this.hideText();
 		}
 	}
 	
 	void OnGUI() {
 		if (showText) {
 			GUI.skin = skin;
-			Rect messageBox = new Rect ((Screen.width - skin.box.fixedWidth) / 2, (Screen.height - skin.box.fixedHeight) / 1.1f, 
-			                            skin.box.fixedWidth, skin.box.fixedHeight);
-			GUI.Box(messageBox, message);
+			GUI.Box(messageBox, PlayerDialogServices.getWrappedLines(this.lines, this.LINES_AMOUNT, this.lineIndex));
 		}
+	}
+
+	private void hideText() {
+		showText = false;
+		this.lineIndex = 0;
 	}
 }
