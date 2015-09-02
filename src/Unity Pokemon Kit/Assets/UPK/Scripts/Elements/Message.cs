@@ -71,7 +71,7 @@ public class Message : MonoBehaviour {
 	}
 	
 	void Update() {
-		if (canSpeak()) {
+		if (DialogServices.canSpeak(this.transform, this.player.transform, MIN_DISTANCE, MAX_ANGLE)) {
 			if (Input.GetButtonDown(INPUT_KEY)) {
 				look();
 				if (this.showText) {
@@ -108,11 +108,6 @@ public class Message : MonoBehaviour {
 		this.arrowTimer = ARROW_SHIFT_DELAY;
 		this.showArrow = false;
 		this.playerController.enabled = true;
-	}
-
-	protected bool canSpeak() {
-		return ((Vector3.Distance (this.transform.position, this.player.transform.position) <= MIN_DISTANCE)
-				&& (Vector3.Angle (this.player.transform.forward, this.transform.position - this.player.transform.position) < MAX_ANGLE));
 	}
 	
 	protected virtual void look() {

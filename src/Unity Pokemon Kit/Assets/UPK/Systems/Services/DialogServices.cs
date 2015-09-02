@@ -40,4 +40,11 @@ public class DialogServices {
 		return wrappedLines;
 	}
 
+	public static bool canSpeak(Transform objectTransform, Transform playerTransform, float minDistance, int maxAngle) {
+		bool canSpeak = true;
+		canSpeak &= (Vector3.Distance (objectTransform.position, playerTransform.position) <= minDistance);
+		canSpeak &= (Vector3.Angle (playerTransform.forward, objectTransform.position - playerTransform.position) < maxAngle);
+		return canSpeak;
+	}
+
 }
