@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 7402803fca8d67948873ce6491006d91
-timeCreated: 1439408248
+guid: 76363163f741b654c9fe863badcdeb53
+timeCreated: 1441383449
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -10,137 +10,119 @@ ModelImporter:
     100004: Bagbelt1
     100006: Bagbelt2
     100008: Bagbelt3
-    100010: BrendanOW
-    100012: BrendanOW_Ring
-    100014: BrendanOW_ShoesA
-    100016: BrendanOW_ShoesB
-    100018: Camera
-    100020: Cap
-    100022: //RootNode
-    100024: Head
-    100026: Hips
-    100028: Lamp
-    100030: LArmA
-    100032: LArmB
-    100034: LFingerA1
-    100036: LFingerA2
-    100038: LFingerB1
-    100040: LFingerB2
-    100042: LFoot
-    100044: LForeArm
-    100046: LHand
-    100048: LHandEX
-    100050: LLeg
-    100052: loc_eye
-    100054: loc_head
-    100056: loc_mouth
-    100058: LShoulder
-    100060: LThigh
-    100062: LToe
-    100064: model
-    100066: Neck
-    100068: Origin
-    100070: RArmA
-    100072: RArmB
-    100074: RFingerA1
-    100076: RFingerA2
-    100078: RFingerB1
-    100080: RFingerB2
-    100082: RFoot
-    100084: RForeArm
-    100086: RHand
-    100088: RHandEX
-    100090: RLeg
-    100092: RShoulder
-    100094: rstr0002_00_fi
-    100096: RThigh
-    100098: RToe
-    100100: Spine1
-    100102: Spine2
-    100104: sw_parts01
-    100106: sw_parts02
-    100108: sw_parts03
-    100110: sw_parts04
-    100112: sw_parts05
-    100114: Waist
+    100010: Cap
+    100012: //RootNode
+    100014: DevBrendan_Armature
+    100016: DevBrendan_Body
+    100018: DevBrendan_Shoes
+    100020: Head
+    100022: Hips
+    100024: LArmA
+    100026: LArmB
+    100028: LFingerA1
+    100030: LFingerA2
+    100032: LFingerB1
+    100034: LFingerB2
+    100036: LFoot
+    100038: LForeArm
+    100040: LHand
+    100042: LHandEX
+    100044: LLeg
+    100046: loc_eye
+    100048: loc_head
+    100050: loc_mouth
+    100052: LShoulder
+    100054: LThigh
+    100056: LToe
+    100058: model
+    100060: Neck
+    100062: Origin
+    100064: RArmA
+    100066: RArmB
+    100068: RFingerA1
+    100070: RFingerA2
+    100072: RFingerB1
+    100074: RFingerB2
+    100076: RFoot
+    100078: RForeArm
+    100080: RHand
+    100082: RHandEX
+    100084: RLeg
+    100086: RShoulder
+    100088: RThigh
+    100090: RToe
+    100092: Spine1
+    100094: Spine2
+    100096: sw_parts01
+    100098: sw_parts02
+    100100: sw_parts03
+    100102: sw_parts04
+    100104: sw_parts05
+    100106: Waist
     400000: Armature
     400002: Bag1
     400004: Bagbelt1
     400006: Bagbelt2
     400008: Bagbelt3
-    400010: BrendanOW
-    400012: BrendanOW_Ring
-    400014: BrendanOW_ShoesA
-    400016: BrendanOW_ShoesB
-    400018: Camera
-    400020: Cap
-    400022: //RootNode
-    400024: Head
-    400026: Hips
-    400028: Lamp
-    400030: LArmA
-    400032: LArmB
-    400034: LFingerA1
-    400036: LFingerA2
-    400038: LFingerB1
-    400040: LFingerB2
-    400042: LFoot
-    400044: LForeArm
-    400046: LHand
-    400048: LHandEX
-    400050: LLeg
-    400052: loc_eye
-    400054: loc_head
-    400056: loc_mouth
-    400058: LShoulder
-    400060: LThigh
-    400062: LToe
-    400064: model
-    400066: Neck
-    400068: Origin
-    400070: RArmA
-    400072: RArmB
-    400074: RFingerA1
-    400076: RFingerA2
-    400078: RFingerB1
-    400080: RFingerB2
-    400082: RFoot
-    400084: RForeArm
-    400086: RHand
-    400088: RHandEX
-    400090: RLeg
-    400092: RShoulder
-    400094: rstr0002_00_fi
-    400096: RThigh
-    400098: RToe
-    400100: Spine1
-    400102: Spine2
-    400104: sw_parts01
-    400106: sw_parts02
-    400108: sw_parts03
-    400110: sw_parts04
-    400112: sw_parts05
-    400114: Waist
-    2300000: BrendanOW
-    2300002: BrendanOW_Ring
-    2300004: BrendanOW_ShoesA
-    2300006: BrendanOW_ShoesB
-    3300000: BrendanOW
-    3300002: BrendanOW_Ring
-    3300004: BrendanOW_ShoesA
-    3300006: BrendanOW_ShoesB
-    4300000: BrendanOW
-    4300002: BrendanOW_ShoesA
-    4300004: BrendanOW_ShoesB
-    4300006: BrendanOW_Ring
-    6400000: BrendanOW
-    6400002: BrendanOW_Ring
-    6400004: BrendanOW_ShoesA
-    6400006: BrendanOW_ShoesB
+    400010: Cap
+    400012: //RootNode
+    400014: DevBrendan_Armature
+    400016: DevBrendan_Body
+    400018: DevBrendan_Shoes
+    400020: Head
+    400022: Hips
+    400024: LArmA
+    400026: LArmB
+    400028: LFingerA1
+    400030: LFingerA2
+    400032: LFingerB1
+    400034: LFingerB2
+    400036: LFoot
+    400038: LForeArm
+    400040: LHand
+    400042: LHandEX
+    400044: LLeg
+    400046: loc_eye
+    400048: loc_head
+    400050: loc_mouth
+    400052: LShoulder
+    400054: LThigh
+    400056: LToe
+    400058: model
+    400060: Neck
+    400062: Origin
+    400064: RArmA
+    400066: RArmB
+    400068: RFingerA1
+    400070: RFingerA2
+    400072: RFingerB1
+    400074: RFingerB2
+    400076: RFoot
+    400078: RForeArm
+    400080: RHand
+    400082: RHandEX
+    400084: RLeg
+    400086: RShoulder
+    400088: RThigh
+    400090: RToe
+    400092: Spine1
+    400094: Spine2
+    400096: sw_parts01
+    400098: sw_parts02
+    400100: sw_parts03
+    400102: sw_parts04
+    400104: sw_parts05
+    400106: Waist
+    2300000: DevBrendan_Body
+    2300002: DevBrendan_Shoes
+    3300000: DevBrendan_Body
+    3300002: DevBrendan_Shoes
+    4300000: DevBrendan_Body
+    4300002: DevBrendan_Shoes
     9500000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
@@ -163,10 +145,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .0299999993
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -177,9 +159,9 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 90
+    normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0

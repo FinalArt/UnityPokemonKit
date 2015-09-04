@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: af5d2fe54407c3b4e993f737b1f215c5
-timeCreated: 1440944872
+guid: 7d54c51a0921e92469d24832ce971b25
+timeCreated: 1441389218
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pokecenter_1_pokecenter_1_pokecen_01
-    100004: pokecenter_2_pokecenter_2_pc_mado
-    100006: pokecenter_3_pokecenter_3_pokecen00
+    100002: PokeCenter_Building
+    100004: PokeCenter_Glass
+    100006: PokeCenter_Highlight
     400000: //RootNode
-    400002: pokecenter_1_pokecenter_1_pokecen_01
-    400004: pokecenter_2_pokecenter_2_pc_mado
-    400006: pokecenter_3_pokecenter_3_pokecen00
-    2300000: pokecenter_1_pokecenter_1_pokecen_01
-    2300002: pokecenter_2_pokecenter_2_pc_mado
-    2300004: pokecenter_3_pokecenter_3_pokecen00
-    3300000: pokecenter_1_pokecenter_1_pokecen_01
-    3300002: pokecenter_2_pokecenter_2_pc_mado
-    3300004: pokecenter_3_pokecenter_3_pokecen00
-    4300000: pokecenter_3_pokecenter_3_pokecen00
-    4300002: pokecenter_2_pokecenter_2_pc_mado
-    4300004: pokecenter_1_pokecenter_1_pokecen_01
+    400002: PokeCenter_Building
+    400004: PokeCenter_Glass
+    400006: PokeCenter_Highlight
+    2300000: PokeCenter_Building
+    2300002: PokeCenter_Glass
+    2300004: PokeCenter_Highlight
+    3300000: PokeCenter_Building
+    3300002: PokeCenter_Glass
+    3300004: PokeCenter_Highlight
+    4300000: PokeCenter_Highlight
+    4300002: PokeCenter_Glass
+    4300004: PokeCenter_Building
     9500000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4

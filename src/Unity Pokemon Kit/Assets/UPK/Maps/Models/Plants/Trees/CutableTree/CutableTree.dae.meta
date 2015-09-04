@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: 21c1fe5771564c44487034018ee7accf
-timeCreated: 1440949461
+guid: 845abc3fcdc5e8c478da9f806cc9dcf4
+timeCreated: 1441387780
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: Camera
-    100002: Cut_Tree
-    100004: //RootNode
-    100006: Lamp
-    400000: Camera
-    400002: Cut_Tree
-    400004: //RootNode
-    400006: Lamp
-    2300000: Cut_Tree
-    3300000: Cut_Tree
-    4300000: Cut_Tree
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: CutableTree
     9500000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
