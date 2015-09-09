@@ -1,4 +1,4 @@
-![Unity Pokemon Kit](/doc/Graphics/Logo/PNG/LogoUPK.png?raw=true "Unity Pokemon Kit")
+![Unity Pokemon Kit](/doc/Graphiques/Logo/PNG/LogoUPK.png?raw=true "Unity Pokemon Kit")
 
 -----
 
@@ -33,5 +33,5 @@ Le dépôt comporte 4 répertoires importants :
 -----
 
 <div align="center">
-	<img src="/doc/Graphics/Logo/PNG/IconUPK.png"/>
+	<img src="/doc/Graphiques/Logo/PNG/IconUPK.png"/>
 </div>
