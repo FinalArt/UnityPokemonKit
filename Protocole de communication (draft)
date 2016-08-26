@@ -1,0 +1,154 @@
+Protocole de communication de UPK et PSDK
+
+1. Généralités
+  Le protocole reposera essentiellement sur un transport des données avec TCP/IP, il s'appuiera sur deux couches application qui auront toute deux des rôles différents.
+
+2. Fonctionnement général du protocole
+  2.1 Authentification des utilisateurs
+    2.1.1 Introduction
+      Ce protocole a pour but de lier plusieurs joueurs entre eux, afin que tout fonctionne pour le mieux, les utilisateurs doivent pouvoir être authentifiés. Pour cela nous aurons besoins d'un serveur central qui permettra à l'utilisateur de s'authentifier et de récupérer une liste des serveurs.
+      Pour une facilité de déploiment il est recommander d'utiliser un autre protocole de couche applicative que le protocole utilisé par les serveurs de communication, par exemple HTTP qui permettra de réaliser le nécessaire concernant l'authentification.
+    2.1.2 Première phase : Récupération de la liste des serveurs
+      Le serveur d'authentification des utilisateurs permet aussi de délivrer une liste des serveurs officiels sur lesquels l'utilisateur peut s'attacher. 
+      Pour la sécurité de l'utilisateur il est mieux qu'il indique au serveur d'authentification à qui il souhaite s'attacher afin de récupérer une clef d'identification conséquente de ce choix.
+      La communication entre le serveur d'authentification et l'utilisateur se déroule de la manière suivante :
+      1. C ---> S Envoi d'une requête de listing des serveurs officiels au serveur d'authentification
+      2. C <--- S Réception de la liste des serveurs
+    2.1.3 Format de la liste des serveurs
+      Pour être traitée assez facilement et interposable de manière simple sur n'importe quel protocole la liste des serveurs sera formaté textuellement.
+      Chaque élément de la liste est séparée par un Carriage Return suivit d'un Line Feed
+      Chaque donnés de la liste sont présentée de la manière suivante :
+      @Serveur&port/Flags/ServerName/ext_data/...
+      * Le champ @Server&port contient l'adresse IP du serveur suivit de son port d'écoute, le tout séparé par un underscore
+        Ex : 2.168.1.11_82
+      * Le champ Flags doit contenir un certain nombre de lettres qui agissent comme des flags et qui permettent de connaitre des informations essentielles sur le serveur
+        Les flags sont les suivants :
+        * H : Horraires, si le serveur a des horraires d'ouverture (serveur mis en ligne par un utilisateur qui ne laisse pas sa machine allumé en permanence).
+        * W : Whitelist, si le serveur possède une Whitelist
+        * C : Cheat, si le serveur autorise les joueurs trichant /!\ Le serveur pourrait être amené à ne faire aucune vérifications.
+        * O : Officiel, si le serveur est considéré comme officiel.
+        * E : Echanges, si le serveur permet de réaliser des échanges.
+        * B : Battle, si le serveur permet de réaliser des combats.
+      * Le champ ServerName contient une chaine Alpha numérique (pouvant inclure des espaces) correspondant au nom du serveur.
+      * Le champ ext_data est un champ optionel qui peut être présent une infinité de fois dans la ligne d'information, il peut contenir :
+        * Les horraires d'ouverture du serveur si le flag H est présent
+        * Une description ne contenant pas de slash
+    2.1.4 Processus d'Authentification
+      Une fois que l'utilisateur a choisi un serveur, il va demander au serveur d'authentification de lui attribuer une clef d'authentification unique, une fois cette clef optenue, c'est la seule information que l'utilisateur enverra au serveur de jeu.
+      Le processus doit se dérouler de cette manière :
+      1. C ---> SAuth : Envoi des informations de connexion (DO,ID,IDsecret,serveur choisi)
+      2. C <--- SAuth : Réception de la clef d'authentification : elle ne fonctionnera que pour le serveur choisi.
+      3. C ---> SJeu : Envoi d'un paquet de connexion contenant uniquement la clef d'authentification
+      4. SJeu ---> SAuth : Envoi de la clef d'authentification affin de déterminer le nom de l'ID de l'utilisateur
+      5. SJeu <--- SAuth : Réception des informations insensible relative à l'utilisateur ou reception d'une erreur
+         Le serveur de jeu peut bannir l'utilisateur si celui-ci lui a envoyé un clef invalide (Cas d'attaque DDOS par serveur de jeu).
+         Le serveur serveur devra vérifier les différentes informations afin d'autoriser ou non le joueur a rester attaché.
+      6. C <--- SJeu : Réception d'un paquet d'acceptation de connexion ou d'erreur (Ban/NonWhiteList/etc...)
+    2.1.5 Une fois authentifié
+      Dès lors que l'utilisateur est authentifié et accepté sur le serveur, il peut désormais réaliser un certain nombre d'actions qui auraient normalement due être refusés.
+  2.2 Comportement attendu du serveur vis à vis des utilisateurs incorrects
+    Le serveur devra toujours envoyer un paquet de type erreur suivit d'un paquet de type deconnecté aux utilisateurs lorsqu'ils ne se comportent pas comme ils devraient le faire suivant le protocol.
+    Le protocol prévoit la déconnexion automatique avec erreur des utilisateurs qui n'utilisent pas une version à jour de ce protocol. Un bannissement peut être réalisé pour cette raison.
+  2.3 Communication de base avec le serveur de jeu
+    Au travers du protocol de communication l'utilisateur communiquera généralement à l'aide d'un paquet de mise à jour de statut lorsqu'il n'a pas d'actions spécifiques à réaliser.
+    Ce paquet doit être envoyé à une fréquence au moins supérieure à 0.5Hz
+    Processus de mise à jour de status :
+    1. C ---> SJeu : Envoi d'un paquet de mise à jour de statut
+    2. C <--- SJeu : Réception d'un paquet de data ou d'erreur contenant les informations essentielles.
+  2.4 Communication entre deux joueurs
+    Généralement le serveur de jeu sert de passerelle de communication entre deux joueurs (combat/échange), la communication indirecte entre deux joueurs implique plus de paquets de différente nature.
+    Le processus se déroule ainsi :
+    1. J1 ---> SJeu : Envoie d'un paquet de type SendTo au serveur
+    2. J1 <--- SJeu : Reception d'un paquet de type processing ou error
+    3. SJeu stoque les données affin de les envoyer au joueur 2
+    4. J2 ---> SJeu : Envoie d'un paquet de mise à jour de statut
+    5. J2 <--- SJeu : Réception d'un paquet de type DataFrom
+    6. J1 ---> SJeu : Envoie d'un paquet de mise à jour de statut
+    7. J1 <--- SJeu : Réception d'un paquet de type reçu ou erreur
+    Bien entendu, le processus se fait en entier si aucune erreur ne survient sinon il s'arrête et les étapes suivante ne sont pas réalisés.
+  2.5 Déconnexion du serveur
+    Il y a une étape à réaliser lors de la déconnexion au serveur, celle-ci marque une déconnexion définitive et provoque la purge des informations qui étaient utilisés lors de l'utilisation du serveur.
+    Cette étape permet de se différentier d'une déconnexion par un crash internet ou fermeture accidentelle de la fenêtre.
+    Processus de déconnexion :
+    1. C ---> SJeu : Envoi d'un paquet de deconnexion
+    2. C <--- SJeu : Reception d'un paquet qui indique que le joueur est déconnecté (socket fermée à la suite)
+    3. SJeu vide les informations et informe les autres utilisateurs de la déconnexion de l'utilisateur déconnecté.
+  2.6 Liste des salles du serveur
+    L'utilisateur devra rejoindre une salle pour pouvoir communiquer avec les autres joueurs. L'organisation en salle permet à deux utilisateurs de se rejoindre et se retrouver plus facilement car le nombre d'utilisateur par salle sera limité par les configurations du serveur et ce nombre sera généralement prévu pour que la liste entière des utilisateur d'une salle puisse être affiché à l'écran.
+    L'utilisateur tout juste connecté demandera au serveur la liste des salles et ceci se réalisera de la manière suivante :
+    1. C ---> SJeu : Envoi d'un paquet de demande de la liste des salles
+    2. C <--- SJeu : Réception d'un paquet contenant la liste complète des salles
+    La liste est contenue dans le data et est formatée selon les détails indiqués dans la partie les différents types de paquet.
+  2.7 Rejoindre une salle
+    L'utilisateur demandera au serveur de rejoindre une salle, ceci aura des incidence sur les autres joueurs :
+    Demande :
+      1. Jr ---> SJeu : Envoi d'un paquet de connexion à une salle
+      2. Jr <--- SJeu : Réception d'un paquet de type connecté ou d'une erreur
+      3. Jr ---> SJeu : Envoi d'un paquet de mise à jour de statut
+      4. Jr <--- SJeu : Réception d'un paquet de data contenant la liste des joueurs déjà présents dans la salle
+    Autres joueurs
+      1. Ja ---> SJeu : Envoi d'un paquet de mise à jour de statut
+      2. Ja <--- Sjeu : Envoi d'un paquet de data contenant la connexion du nouveau joueur avec ses informations
+      
+3. Format des paquets du protocole de communication
+  3.1 Structure générale
+    L'intégralité des paquets est structurée de la même manière :
+    [DataSize 2o][PaquetType, 1o][Data]
+    DataSize indique la taille du data, un utilisateur ne peut pas envoyer plus de 64ko d'information au serveur, il en va de même dans l'autre sens.
+    PaquetType est un numéro variant entre 0 et 255 pour indiquer la nature du paquet (et donc du data qu'il contiendra).
+    Data est le contenu additionnel si nécessaire du paquet
+  3.2 Lecture conseillée d'un paquet
+    Comme les paquets peuvent être envoyés les un derrière les autres avec TCP il est conseillé de lire les paquets de la manière suivante :
+    [DataSize][PaquetType] <- recv(3) (réception des informations relative au paquet)
+    [Data] <- recv(DataSize) (Ignorer si DataSize = 0)
+    Ceci permettra de lire les paquets qui suivent sans le moindre souci, surtout lorsqu'il est nécessaire de recevoir plusieurs paquets.
+  3.3 Les différents types de paquets
+    Il existe tout un tas de type de paquet qui ont chacun un objectif précis, voici la liste non négligeable de ceux-ci et de leur utilité :
+    0. Type étendu : Lorsqu'on arrivera à la limite des types de paquets dans ce protocole on mettra le type à 0 et on spéficiera le type dans le data.
+    1. Connexion : Permet à l'utilisateur de demander une connexion.
+      [Data] = [AuthKey : Clef d'authentification]
+    2. Connecté : Permet au serveur d'indiquer à l'utilisateur qu'il est connecté
+    3. StatusUpdate : Permet de demander au serveur une mise à jour de statut
+    4. DataPaquet : Paquet contenant des données comprises en fonction du moment de la réception
+      [Data] = [Last, 1o][Status_Data(0)][Status_Data(1)]...[Status_Data(n)]
+        Last indique si le DataPaquet est le dernier (cas où il y a plusieurs informations)
+        Status_Data contient un identifiant du statut et les données qui lui est relatif.
+    5. SendTo : Paquet permettant à l'utilisateur d'envoyer des données à un autre utilisateur
+      [Data] = [ToUID, 2o][ToData]
+    6. DataFrom : Paquet envoyé par le serveur à un utilisateur qui va recevoir des données envoyées par un autre utilisateur.
+      [Data] = [FromUID, 2o][ToData]
+    7. ProcessingPaquet : Paquet indiquant à l'utilisateur que le serveur traite sa demande
+    8. ReceivedPaquet : Paquet indiquant à l'utilisateur l'état de la réception du paquet qu'il a envoyé à un autre utilisateur.
+      [Data] = [ToUID, 2o][1 ou 2]
+      1 = Paquet reçu
+      2 = Paquet non reçu
+    9. RoomListRequest : Demande de reception de la liste des salles.
+    10. RoomList : Liste des salles du serveur.
+      [Data] = [NumOfRoom, 1o][Info_Room(0)][Info_Room(1)]...[Info_Room(n)]
+      [Info_Room] = [DataSize, 1o][Flags, 1o][MaxPlayer, 1o][NbOfPlayer, 1o][Name, NullChar]
+      Flags : 
+        0x01 = Echanges actifs
+        0x02 = Combats actifs
+        0x04 = Mode Spectateur actif
+        0x80 = Amis présent (A condition que le serveur ait une liste de relations)
+    11. <--->
+    
+    253. DisconnectedPaquet : Paquet envoyé par le serveur pour indiquer à l'utilisateur qu'il est maintenant déconnecté.
+    254. DisconnectPaquet : Paquet envoyé par l'utilisateur pour indiquer sa déconnexion définitive.
+    255. ErrorPaquet : Paquet envoyé par le serveur pour indiquer une erreur :
+      [Data] = [ErrorID, 2o][ErrorData]
+  3.4 Types de statuts et leur contenus (Status_Data)
+    Les données relatives aux statuts sont empactés dans le data de la sorte : [Type, 1o][SData]
+    0. Type étendu
+      [SData] = [Size, VLV][Type, 1o][Data]
+    1. Vidage de la liste des joueurs de la salle
+    2. PlayerAdd, Ajout d'un joueur à la liste de la salle
+      [SData] = [UID, 2o][Flags, 1o][DO, 4o][Name, NullChar]
+      UID : Identifiant de l'utilisateur au sein du serveur
+      Flags : 
+        0x01 : En échange
+        0x02 : En combat
+        0x80 : Occupé
+    3. PlayerRm, Suppression d'un joueur de la liste de la salle
+      [SData] = [UID, 2o]
+    4. <--->
